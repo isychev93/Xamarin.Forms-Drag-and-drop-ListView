@@ -9,7 +9,7 @@ REMRAK: This library implemented only for iOS, but i hope that Android version w
 ![](https://i.gyazo.com/1d6d0b7983fb403a95b34bbd60eb2884.gif)
 
 # Usage
-## Aad dependencies
+## Add dependencies
 MovableListView to your Portable project.
 
 MovableListView.iOS to your iOS project.
