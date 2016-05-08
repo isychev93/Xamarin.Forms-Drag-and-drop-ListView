@@ -1,7 +1,7 @@
 # Xamarin.Forms-Drag-and-drop-ListView
 Hello!
 
-At the time of writing this code, Xamarin.Forms does not support rows reordering.
+At the time of writing this code, Xamarin.Forms does not support rows reordering and this is solution of problem.
 
 REMRAK: This library implemented only for iOS, but i hope that Android version will be released soon.
 
