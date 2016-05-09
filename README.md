@@ -35,4 +35,4 @@ Instead standart ViewCell (as DataTemplate) use MovableViewCell.
       </ListView.ItemTemplate>
     </ListView>
 ```
-ListView.ItemsSource collection must implement IObservableCollectionEx (see comment for MovableViewCell class).
+ListView.ItemsSource collection must implement IObservableCollectionEx (see ObservableCollectionEx).
