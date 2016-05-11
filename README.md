@@ -5,7 +5,8 @@ At the time of writing this code, Xamarin.Forms does not support rows reordering
 
 **REMRAK:** This library implemented only for iOS, but i hope that Android version will be released soon.
 
-# Demo
+
+# Demo (see example in repository)
 ![](https://i.gyazo.com/1d6d0b7983fb403a95b34bbd60eb2884.gif)
 
 # Usage
