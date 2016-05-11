@@ -7,6 +7,7 @@ At the time of writing this code, Xamarin.Forms does not support rows reordering
 
 
 # Demo (see example in repository)
+## iOS
 ![](https://i.gyazo.com/1d6d0b7983fb403a95b34bbd60eb2884.gif)
 
 # Usage
