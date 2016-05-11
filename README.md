@@ -30,11 +30,11 @@ namespace YourProjectName.iOS
 ```
 ## How to use in code (two easy steps)
 
-### ListView.ItemsSourc must implement MovableListView.IObservableCollectionEx
-*ListView.ItemsSource* collection must implement *MovableListView.IObservableCollectionEx*. You can use MovableListView.ObservableCollectionEx which provides all necessary methods and inherited from *ObservableCollection*.
+### Use MovableListView.IObservableCollectionEx
+*ListView.ItemsSource* collection must implement *MovableListView.IObservableCollectionEx*. You can use *MovableListView.ObservableCollectionEx* which provides all necessary methods and inherited from *ObservableCollection*.
 
 ### Use MovableViewCell
-Fore using instead standart ViewCell (as DataTemplate) use MovableViewCell.
+ Use MovableViewCell instead standart ViewCell.
 
 *For example:*
 ```xaml
