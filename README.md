@@ -11,11 +11,11 @@ At the time of writing this code, Xamarin.Forms does not support rows reordering
 # Usage
 ## Add dependencies
 ### PCL project
-**MovableListView**
+**MovableListView.dll**
 ### iOS project
-**MovableListView**
+**MovableListView.dll**
 
-**MovableListView.iOS**
+**MovableListView.iOS.dll**
 
 ## ExportRenderer
 Add **ExportRenderer** line of code in your executable iOS poject (for example in AppDelegate.cs).
