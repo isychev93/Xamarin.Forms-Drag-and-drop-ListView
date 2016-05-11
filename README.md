@@ -1,4 +1,4 @@
-# Xamarin.Forms-Drag-and-drop-ListView
+# Xamarin.Forms Drag and Drop ListView
 Hello!
 
 At the time of writing this code, Xamarin.Forms does not support rows reordering and this is solution of problem.
