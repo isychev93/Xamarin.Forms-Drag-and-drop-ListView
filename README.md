@@ -20,9 +20,9 @@ At the time of writing this code, Xamarin.Forms does not support rows reordering
 **MovableListView.iOS.dll**
 
 ## ExportRenderer
-Add **ExportRenderer** line of code in your executable iOS poject (for example in AppDelegate.cs).
+Add **ExportRenderer** line of code in your executable iOS poject.
 
-*For example:**
+**For example:**
 ```C#
 [assembly: ExportRenderer(typeof(MovableViewCell), typeof(MovableViewCellRenderer))]
 namespace YourProjectName.iOS
