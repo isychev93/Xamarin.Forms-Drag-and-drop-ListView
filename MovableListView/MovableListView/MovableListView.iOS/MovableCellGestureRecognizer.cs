@@ -56,6 +56,12 @@ namespace MovableListView.iOS
                 case UIGestureRecognizerState.Possible:
                     break;
                 case UIGestureRecognizerState.Began:
+                    if (cell.BeginReorderCommand != null)
+                    {
+                        tableView.BeginUpdates();
+                        cell.BeginReorderCommand.Execute(new ReorderCommandParam(newRowIndexPath.Row, newRowIndexPath.Section, -1, -1));
+                        tableView.EndUpdates();
+                    }
                     if (newRowIndexPath != null)
                     {
                         sourceOrNewAppliedIndexPath = newRowIndexPath;
@@ -98,7 +104,9 @@ namespace MovableListView.iOS
                         }
                         else
                         {
+                            tableView.BeginUpdates();
                             cell.CustomReorderCommaond.Execute(new ReorderCommandParam(sourceOrNewAppliedIndexPath.Row, sourceOrNewAppliedIndexPath.Section, newRowIndexPath.Row, newRowIndexPath.Section));
+                            tableView.EndUpdates();
                         }
 
                         sourceOrNewAppliedIndexPath = newRowIndexPath;
@@ -107,6 +115,12 @@ namespace MovableListView.iOS
                 case UIGestureRecognizerState.Ended:
                 case UIGestureRecognizerState.Cancelled:
                 case UIGestureRecognizerState.Failed:
+                    if (cell.EndReorderCommand != null)
+                    {
+                        tableView.BeginUpdates();
+                        cell.EndReorderCommand.Execute(new ReorderCommandParam(-1, -1, newRowIndexPath.Row, newRowIndexPath.Section));
+                        tableView.EndUpdates();
+                    }
                     if (opaqueView == null)
                         return;
 

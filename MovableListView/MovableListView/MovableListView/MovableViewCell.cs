@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace MovableListView
 {
@@ -30,6 +31,10 @@ namespace MovableListView
     /// </summary>
     public class MovableViewCell : ViewCell
     {
+        public static BindableProperty CustomReorderCommaondProperty = BindableProperty.Create("CustomReorderCommaond", typeof(Command<ReorderCommandParam>), typeof(MovableViewCell));
+        public static BindableProperty BeginReorderCommandProperty = BindableProperty.Create("BeginReorderCommand", typeof(Command<ReorderCommandParam>), typeof(MovableViewCell));
+        public static BindableProperty EndReorderCommandProperty = BindableProperty.Create("EndReorderCommand", typeof(Command<ReorderCommandParam>), typeof(MovableViewCell));
+
         /// <summary>
         /// Command for custom reordering.
         /// Called when touch point within a new row.
@@ -37,6 +42,22 @@ namespace MovableListView
         /// <remarks>
         /// If not null, all internal reordering logics will be ignored.
         /// </remarks>
-        public Command<ReorderCommandParam> CustomReorderCommaond { get; set; }
+        public Command<ReorderCommandParam> CustomReorderCommaond
+        {
+            get { return (Command<ReorderCommandParam>)GetValue(CustomReorderCommaondProperty); }
+            set { SetValue(CustomReorderCommaondProperty, value); }
+        }
+
+        public Command<ReorderCommandParam> BeginReorderCommand
+        {
+            get { return (Command<ReorderCommandParam>)GetValue(BeginReorderCommandProperty); }
+            set { SetValue(BeginReorderCommandProperty, value); }
+        }
+
+        public Command<ReorderCommandParam> EndReorderCommand
+        {
+            get { return (Command<ReorderCommandParam>)GetValue(EndReorderCommandProperty); }
+            set { SetValue(EndReorderCommandProperty, value); }
+        }
     }
 }
