@@ -20,8 +20,10 @@ namespace MovableListView.iOS
 
             var newCell = base.GetCell(item, reusableCell, tv);
 
-            if (newCell.GestureRecognizers == null || !newCell.GestureRecognizers.OfType<MovableCellGestureRecognizer>().Any())
-                newCell.AddGestureRecognizer(MovableCellGestureRecognizer.CreateGesture(parent, tv, movableViewCell, newCell));
+            if (newCell.GestureRecognizers != null && newCell.GestureRecognizers.OfType<MovableCellGestureRecognizer>().Any())
+                newCell.RemoveGestureRecognizer(newCell.GestureRecognizers.OfType<MovableCellGestureRecognizer>().Single());
+
+            newCell.AddGestureRecognizer(MovableCellGestureRecognizer.CreateGesture(parent, tv, movableViewCell, newCell));
             return newCell;
         }
     }

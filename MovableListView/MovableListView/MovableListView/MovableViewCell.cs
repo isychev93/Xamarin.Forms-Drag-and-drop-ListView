@@ -33,7 +33,7 @@ namespace MovableListView
     {
         public static BindableProperty CustomReorderCommaondProperty = BindableProperty.Create("CustomReorderCommaond", typeof(Command<ReorderCommandParam>), typeof(MovableViewCell));
         public static BindableProperty BeginReorderCommandProperty = BindableProperty.Create("BeginReorderCommand", typeof(Command<ReorderCommandParam>), typeof(MovableViewCell));
-        public static BindableProperty EndReorderCommandProperty = BindableProperty.Create("EndReorderCommand", typeof(Command<ReorderCommandParam>), typeof(MovableViewCell));
+        public static BindableProperty EndReorderCommandProperty = BindableProperty.Create("EndReorderCommand", typeof(ICommand), typeof(MovableViewCell));
 
         /// <summary>
         /// Command for custom reordering.
@@ -54,9 +54,9 @@ namespace MovableListView
             set { SetValue(BeginReorderCommandProperty, value); }
         }
 
-        public Command<ReorderCommandParam> EndReorderCommand
+        public ICommand EndReorderCommand
         {
-            get { return (Command<ReorderCommandParam>)GetValue(EndReorderCommandProperty); }
+            get { return (ICommand)GetValue(EndReorderCommandProperty); }
             set { SetValue(EndReorderCommandProperty, value); }
         }
     }
